@@ -25,7 +25,7 @@ def generate_and_visualize_clusters(n_clusters: int, n_features: int, n_samples:
         n_samples=n_samples,
         n_features=n_features,
         centers=n_clusters,
-        cluster_std=5,      # Стандартное отклонение кластеров (можно настроить)
+        cluster_std=1,      # Стандартное отклонение кластеров (можно настроить)
         random_state=random_state
     )
 
@@ -100,17 +100,6 @@ def save_to_csv(X: np.ndarray, y: np.ndarray, filename: str = "cluster_dataset.c
     # Возвращаем абсолютный путь для удобства
     abs_path = os.path.abspath(filename)
     return abs_path
-
-
-
-
-
-
-
-
-
-
-
 
 # ==========================================
 # Пример использования (НАСТРОЙКИ ЗДЕСЬ)
